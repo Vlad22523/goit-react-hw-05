@@ -7,15 +7,15 @@ const MovieCast = () => {
   const params = useParams();
   const [casts, setCasts] = useState([]);
   useEffect(() => {
-    try {
-      const getData = async () => {
+    const getData = async () => {
+      try {
         const data = await castsFilm(params.movieId);
         setCasts(data);
-      };
-      getData();
-    } catch (err) {
-      console.log(err);
-    }
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getData();
   }, [params.movieId]);
 
   if (casts.length === 0) {

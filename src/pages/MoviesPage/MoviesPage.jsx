@@ -29,8 +29,8 @@ const MoviesPage = () => {
     if (!searchValue) {
       return;
     }
-    try {
-      const getData = async () => {
+    const getData = async () => {
+      try {
         setLoading(true);
         const data = await searchFilms(searchValue);
         if (data.length === 0) {
@@ -38,13 +38,13 @@ const MoviesPage = () => {
           return notify("Didn't found your query");
         }
         setMovies(data);
-      };
-      getData();
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoading(false);
-    }
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getData();
   }, [searchValue]);
 
   return (

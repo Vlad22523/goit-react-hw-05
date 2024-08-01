@@ -20,18 +20,18 @@ const MovieDetailsPage = () => {
     // if (!params.movieId) {
     //   return;
     // }
-    try {
-      setLoader(true);
-      const getData = async () => {
+    const getData = async () => {
+      try {
+        setLoader(true);
         const data = await detailsFilms(params.movieId);
         setMovieData(data);
-      };
-      getData();
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoader(false);
-    }
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setLoader(false);
+      }
+    };
+    getData();
   }, [params.movieId]);
 
   if (!movieData) {

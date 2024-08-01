@@ -7,24 +7,24 @@ const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    try {
-      const getData = async () => {
+    const getData = async () => {
+      try {
         setLoading(true);
         const data = await popularFilms();
         setMovies(data);
-      };
-      getData();
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoading(false);
-    }
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getData();
   }, []);
 
   return (
     <>
-      {loading && <Loader />}
       <h1>Popular Movies</h1>
+      {loading && <Loader />}
       <MoviesList movies={movies} basePath={"movies/"} />
     </>
   );

@@ -8,18 +8,18 @@ const MovieReviews = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    try {
-      setLoading(true);
-      const getData = async () => {
+    const getData = async () => {
+      try {
+        setLoading(true);
         const data = await reviewsFilm(params.movieId);
         setReviews(data);
-      };
-      getData();
-    } catch (err) {
-      alert(err);
-    } finally {
-      setLoading(false);
-    }
+      } catch (err) {
+        alert(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getData();
   }, [params.movieId]);
 
   if (reviews.length === 0) {
