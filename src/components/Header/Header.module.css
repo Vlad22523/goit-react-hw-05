@@ -1,0 +1,25 @@
+.header {
+  height: 70px;
+  background-color: aquamarine;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  color: black;
+  text-decoration: underline;
+}
+
+.list {
+  list-style-type: none;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+
+  li {
+    font-size: 20px;
+  }
+}
