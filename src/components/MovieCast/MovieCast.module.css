@@ -1,0 +1,32 @@
+/* MovieCast.module.css */
+
+.castList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.castItem {
+  text-align: center;
+}
+
+.castImage {
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.castName {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.castCharacter {
+  font-size: 14px;
+  color: #666;
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import { reviewsFilm } from "../../services/api";
+import s from "./MovieReviews.module.css";
 
 const MovieReviews = () => {
   const params = useParams();
@@ -29,11 +30,11 @@ const MovieReviews = () => {
   return (
     <div>
       {loading && <Loader />}
-      <ul>
+      <ul className={s.reviewList}>
         {reviews.map((rew) => (
-          <li key={rew.id}>
-            <h2>Author: {rew.author}</h2>
-            <p>{rew.content}</p>
+          <li key={rew.id} className={s.reviewItem}>
+            <h2 className={s.reviewAuthor}>Author: {rew.author}</h2>
+            <p className={s.reviewContent}>{rew.content}</p>
           </li>
         ))}
       </ul>

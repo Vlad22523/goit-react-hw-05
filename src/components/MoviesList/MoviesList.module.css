@@ -1,0 +1,43 @@
+.movieList {
+  list-style: none;
+  padding: 20px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, 1fr); /* Три колонки з рівною шириною */
+}
+
+.movieItem {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movieItem:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movieLink {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+}
+
+/* Додаємо медіа-запит для адаптивності */
+@media (max-width: 768px) {
+  .movieList {
+    grid-template-columns: repeat(2, 1fr); /* Дві колонки на меншому екрані */
+  }
+}
+
+@media (max-width: 480px) {
+  .movieList {
+    grid-template-columns: 1fr; /* Одна колонка на дуже малому екрані */
+  }
+}

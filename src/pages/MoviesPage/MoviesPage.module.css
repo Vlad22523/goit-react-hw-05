@@ -1,0 +1,61 @@
+/* MoviesPage.module.css */
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchForm {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.searchButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #005bb5;
+}
+
+.moviesList {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.moviesListItem {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.movieLink {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.movieLink:hover {
+  color: #0077ff;
+}

@@ -23,7 +23,7 @@ const HomePage = () => {
 
   return (
     <>
-      <h1>Popular Movies</h1>
+      <h1 style={{ textAlign: "center" }}>Popular Movies</h1>
       {loading && <Loader />}
       <MoviesList movies={movies} basePath={"movies/"} />
     </>
